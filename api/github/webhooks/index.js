@@ -1,7 +1,7 @@
-const { createNodeMiddleware, createProbot } = require("probot");
+const { createNodeMiddleware, createRobot} = require("robot");
 const app = require("../../../dist/index.js");
 module.exports = createNodeMiddleware(app, {
-  probot: createProbot({
+  robot: createRobot({
     overrides: {
       privateKey: Buffer.from(process.env.PRIVATE_KEY, "base64").toString(),
     }
